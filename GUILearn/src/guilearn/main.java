@@ -16,6 +16,8 @@ public class main extends javax.swing.JFrame {
      */
     public main() {
         initComponents();
+        //æ”÷–œ‘ æ
+        this.setLocationRelativeTo(null);  
     }
 
     /**
@@ -28,13 +30,23 @@ public class main extends javax.swing.JFrame {
     private void initComponents() {
 
         jButtonFlowLayout = new javax.swing.JButton();
+        jButtonBorderLayout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GUILearn");
+        setLocation(new java.awt.Point(250, 250));
 
         jButtonFlowLayout.setText("FlowLayoutDemo");
         jButtonFlowLayout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonFlowLayoutActionPerformed(evt);
+            }
+        });
+
+        jButtonBorderLayout.setText("BorderLayoutDemo");
+        jButtonBorderLayout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBorderLayoutActionPerformed(evt);
             }
         });
 
@@ -45,13 +57,17 @@ public class main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(jButtonFlowLayout)
-                .addContainerGap(464, Short.MAX_VALUE))
+                .addGap(57, 57, 57)
+                .addComponent(jButtonBorderLayout)
+                .addContainerGap(246, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jButtonFlowLayout)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonFlowLayout)
+                    .addComponent(jButtonBorderLayout))
                 .addContainerGap(392, Short.MAX_VALUE))
         );
 
@@ -62,6 +78,13 @@ public class main extends javax.swing.JFrame {
        FlowLayoutDemo demo=new FlowLayoutDemo();
        demo.setVisible(true);
     }//GEN-LAST:event_jButtonFlowLayoutActionPerformed
+
+    private void jButtonBorderLayoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorderLayoutActionPerformed
+        BorderLayoutDemo demo=new BorderLayoutDemo();
+        demo.setSize(400,200);
+        demo.pack();
+        demo.setVisible(true);
+    }//GEN-LAST:event_jButtonBorderLayoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,6 +122,7 @@ public class main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonBorderLayout;
     private javax.swing.JButton jButtonFlowLayout;
     // End of variables declaration//GEN-END:variables
 }
