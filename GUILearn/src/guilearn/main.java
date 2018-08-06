@@ -34,6 +34,13 @@ public class main extends javax.swing.JFrame {
         jButtonBorderLayout = new javax.swing.JButton();
         jButtonGridLayout = new javax.swing.JButton();
         jButtonCardLayout = new javax.swing.JButton();
+        jButtonAdapter = new javax.swing.JButton();
+        JButtonJIconLabel = new javax.swing.JButton();
+        jButtonJTextField = new javax.swing.JButton();
+        jButtonJCheckBox = new javax.swing.JButton();
+        jButtonJRadioButton = new javax.swing.JButton();
+        jButtonJComboBox = new javax.swing.JButton();
+        JButtonJTabbedPane = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GUILearn");
@@ -67,6 +74,55 @@ public class main extends javax.swing.JFrame {
             }
         });
 
+        jButtonAdapter.setText("AdapterDemo");
+        jButtonAdapter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAdapterActionPerformed(evt);
+            }
+        });
+
+        JButtonJIconLabel.setText("JIconLabelDemo");
+        JButtonJIconLabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonJIconLabelActionPerformed(evt);
+            }
+        });
+
+        jButtonJTextField.setText("JTextFieldDemo");
+        jButtonJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJTextFieldActionPerformed(evt);
+            }
+        });
+
+        jButtonJCheckBox.setText("JCheckBoxDemo");
+        jButtonJCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJCheckBoxActionPerformed(evt);
+            }
+        });
+
+        jButtonJRadioButton.setText("JRadioButtonDemo");
+        jButtonJRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJRadioButtonActionPerformed(evt);
+            }
+        });
+
+        jButtonJComboBox.setText("JComboBoxDemo");
+        jButtonJComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJComboBoxActionPerformed(evt);
+            }
+        });
+
+        JButtonJTabbedPane.setText("JTabbedPaneDemo");
+        JButtonJTabbedPane.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonJTabbedPaneActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -74,14 +130,25 @@ public class main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonCardLayout)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButtonAdapter, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonCardLayout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonFlowLayout)
-                        .addGap(57, 57, 57)
-                        .addComponent(jButtonBorderLayout)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonFlowLayout)
+                            .addComponent(JButtonJIconLabel)
+                            .addComponent(jButtonJRadioButton))
+                        .addGap(41, 41, 41)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonBorderLayout)
+                            .addComponent(jButtonJTextField)
+                            .addComponent(jButtonJComboBox))
                         .addGap(50, 50, 50)
-                        .addComponent(jButtonGridLayout)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JButtonJTabbedPane)
+                            .addComponent(jButtonJCheckBox)
+                            .addComponent(jButtonGridLayout))))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,7 +160,19 @@ public class main extends javax.swing.JFrame {
                     .addComponent(jButtonGridLayout))
                 .addGap(30, 30, 30)
                 .addComponent(jButtonCardLayout)
-                .addContainerGap(335, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(jButtonAdapter)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JButtonJIconLabel)
+                    .addComponent(jButtonJTextField)
+                    .addComponent(jButtonJCheckBox))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonJRadioButton)
+                    .addComponent(jButtonJComboBox)
+                    .addComponent(JButtonJTabbedPane))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
         pack();
@@ -125,6 +204,65 @@ public class main extends javax.swing.JFrame {
         demo.setSize(400, 200);
         demo.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonCardLayoutActionPerformed
+
+    private void jButtonAdapterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdapterActionPerformed
+        AdapterDemo adapterDemo = new AdapterDemo();
+        adapterDemo.setVisible(true);
+    }//GEN-LAST:event_jButtonAdapterActionPerformed
+
+    private void JButtonJIconLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonJIconLabelActionPerformed
+        mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        JIconLabelDemo jIconLabelDemo = new JIconLabelDemo();
+        main.add(jIconLabelDemo);
+        jIconLabelDemo.setBounds(0, 0, 500, 500);
+        jIconLabelDemo.setVisible(true);
+    }//GEN-LAST:event_JButtonJIconLabelActionPerformed
+
+    private void jButtonJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJTextFieldActionPerformed
+        mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        JTextFieldDemo demo = new JTextFieldDemo();
+        main.add(demo);
+        demo.setBounds(0, 0, 500, 500);
+        demo.setVisible(true);
+    }//GEN-LAST:event_jButtonJTextFieldActionPerformed
+
+    private void jButtonJCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJCheckBoxActionPerformed
+        mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        JCheckBoxDemo demo = new JCheckBoxDemo();
+        main.add(demo);
+        demo.setBounds(0, 0, 500, 500);
+        demo.setVisible(true);
+    }//GEN-LAST:event_jButtonJCheckBoxActionPerformed
+
+    private void jButtonJRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJRadioButtonActionPerformed
+        mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        JRadioButtonDemo demo = new JRadioButtonDemo();
+        main.add(demo);
+        demo.setBounds(0, 0, 500, 500);
+        demo.setVisible(true);
+    }//GEN-LAST:event_jButtonJRadioButtonActionPerformed
+
+    private void jButtonJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJComboBoxActionPerformed
+       mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        JComboBoxDemo demo = new JComboBoxDemo();
+        main.add(demo);
+        demo.setBounds(0, 0, 500, 500);
+        demo.setVisible(true);
+    }//GEN-LAST:event_jButtonJComboBoxActionPerformed
+
+    private void JButtonJTabbedPaneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonJTabbedPaneActionPerformed
+       mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        JTabbedPaneDemo demo=new JTabbedPaneDemo();
+        main.add(demo);
+        demo.setBounds(0, 0, 500, 500);
+        demo.setVisible(true);
+    }//GEN-LAST:event_JButtonJTabbedPaneActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,9 +300,16 @@ public class main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JButtonJIconLabel;
+    private javax.swing.JButton JButtonJTabbedPane;
+    private javax.swing.JButton jButtonAdapter;
     private javax.swing.JButton jButtonBorderLayout;
     private javax.swing.JButton jButtonCardLayout;
     private javax.swing.JButton jButtonFlowLayout;
     private javax.swing.JButton jButtonGridLayout;
+    private javax.swing.JButton jButtonJCheckBox;
+    private javax.swing.JButton jButtonJComboBox;
+    private javax.swing.JButton jButtonJRadioButton;
+    private javax.swing.JButton jButtonJTextField;
     // End of variables declaration//GEN-END:variables
 }

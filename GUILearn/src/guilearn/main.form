@@ -30,16 +30,31 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButtonCardLayout" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="jButtonFlowLayout" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                      <Component id="jButtonBorderLayout" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="jButtonAdapter" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonCardLayout" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButtonFlowLayout" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JButtonJIconLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonJRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButtonBorderLayout" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonJTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonJComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jButtonGridLayout" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="JButtonJTabbedPane" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonJCheckBox" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonGridLayout" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="51" max="32767" attributes="0"/>
+              <EmptySpace pref="43" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -54,7 +69,21 @@
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="jButtonCardLayout" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="335" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Component id="jButtonAdapter" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JButtonJIconLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonJCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButtonJRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonJComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JButtonJTabbedPane" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="186" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,6 +119,62 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCardLayoutActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonAdapter">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="AdapterDemo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAdapterActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="JButtonJIconLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="JIconLabelDemo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JButtonJIconLabelActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonJTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="JTextFieldDemo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonJTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonJCheckBox">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="JCheckBoxDemo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonJCheckBoxActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonJRadioButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="JRadioButtonDemo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonJRadioButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonJComboBox">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="JComboBoxDemo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonJComboBoxActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="JButtonJTabbedPane">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="JTabbedPaneDemo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JButtonJTabbedPaneActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
