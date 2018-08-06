@@ -43,6 +43,7 @@ public class main extends javax.swing.JFrame {
         JButtonJTabbedPane = new javax.swing.JButton();
         jButtonJScrollPane = new javax.swing.JButton();
         jButtonJTree = new javax.swing.JButton();
+        jButtonJTable = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GUILearn");
@@ -139,6 +140,13 @@ public class main extends javax.swing.JFrame {
             }
         });
 
+        jButtonJTable.setText("JTableDemo");
+        jButtonJTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJTableActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -157,17 +165,16 @@ public class main extends javax.swing.JFrame {
                             .addComponent(jButtonJScrollPane))
                         .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonJTree)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButtonBorderLayout)
-                                    .addComponent(jButtonJTextField)
-                                    .addComponent(jButtonJComboBox))
-                                .addGap(50, 50, 50)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(JButtonJTabbedPane)
-                                    .addComponent(jButtonJCheckBox)
-                                    .addComponent(jButtonGridLayout))))))
+                            .addComponent(jButtonBorderLayout)
+                            .addComponent(jButtonJTextField)
+                            .addComponent(jButtonJComboBox)
+                            .addComponent(jButtonJTree))
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonJTable)
+                            .addComponent(JButtonJTabbedPane)
+                            .addComponent(jButtonJCheckBox)
+                            .addComponent(jButtonGridLayout))))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -195,7 +202,8 @@ public class main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonJScrollPane)
-                    .addComponent(jButtonJTree))
+                    .addComponent(jButtonJTree)
+                    .addComponent(jButtonJTable))
                 .addContainerGap(141, Short.MAX_VALUE))
         );
 
@@ -306,6 +314,15 @@ public class main extends javax.swing.JFrame {
         demo.setVisible(true);
     }//GEN-LAST:event_jButtonJTreeActionPerformed
 
+    private void jButtonJTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJTableActionPerformed
+        mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        JTableDemo demo=new JTableDemo();
+        main.add(demo);
+        demo.setBounds(0, 0, 1000, 1000);
+        demo.setVisible(true);
+    }//GEN-LAST:event_jButtonJTableActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -353,6 +370,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton jButtonJComboBox;
     private javax.swing.JButton jButtonJRadioButton;
     private javax.swing.JButton jButtonJScrollPane;
+    private javax.swing.JButton jButtonJTable;
     private javax.swing.JButton jButtonJTextField;
     private javax.swing.JButton jButtonJTree;
     // End of variables declaration//GEN-END:variables

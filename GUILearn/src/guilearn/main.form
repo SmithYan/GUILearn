@@ -43,20 +43,17 @@
                       </Group>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonJTree" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButtonBorderLayout" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonJTextField" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonJComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="JButtonJTabbedPane" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonJCheckBox" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonGridLayout" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="jButtonBorderLayout" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonJTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonJComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonJTree" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButtonJTable" min="-2" max="-2" attributes="0"/>
+                          <Component id="JButtonJTabbedPane" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonJCheckBox" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonGridLayout" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -93,6 +90,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonJScrollPane" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtonJTree" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonJTable" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="141" max="32767" attributes="0"/>
           </Group>
@@ -202,6 +200,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonJTreeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonJTable">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="JTableDemo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonJTableActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
