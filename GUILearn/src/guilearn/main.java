@@ -44,6 +44,10 @@ public class main extends javax.swing.JFrame {
         jButtonJScrollPane = new javax.swing.JButton();
         jButtonJTree = new javax.swing.JButton();
         jButtonJTable = new javax.swing.JButton();
+        jButtonSimpleImageLoaderApplet = new javax.swing.JButton();
+        JButtonSimpleImageLoader = new javax.swing.JButton();
+        jButtonAnimation = new javax.swing.JButton();
+        jButtonAudio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GUILearn");
@@ -147,6 +151,34 @@ public class main extends javax.swing.JFrame {
             }
         });
 
+        jButtonSimpleImageLoaderApplet.setText("SimpleImageLoaderApplet");
+        jButtonSimpleImageLoaderApplet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSimpleImageLoaderAppletActionPerformed(evt);
+            }
+        });
+
+        JButtonSimpleImageLoader.setText("SimpleImageLoader");
+        JButtonSimpleImageLoader.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonSimpleImageLoaderActionPerformed(evt);
+            }
+        });
+
+        jButtonAnimation.setText("Animation");
+        jButtonAnimation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnimationActionPerformed(evt);
+            }
+        });
+
+        jButtonAudio.setText("audio");
+        jButtonAudio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAudioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -154,28 +186,38 @@ public class main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonAudio)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jButtonAdapter, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonCardLayout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonFlowLayout)
-                            .addComponent(JButtonJIconLabel)
-                            .addComponent(jButtonJRadioButton)
-                            .addComponent(jButtonJScrollPane))
-                        .addGap(41, 41, 41)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonFlowLayout)
+                                    .addComponent(JButtonJIconLabel)
+                                    .addComponent(jButtonJRadioButton)
+                                    .addComponent(jButtonJScrollPane))
+                                .addGap(41, 41, 41)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonBorderLayout)
+                                    .addComponent(jButtonJTextField)
+                                    .addComponent(jButtonJTree)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(32, 32, 32)
+                                        .addComponent(jButtonJComboBox))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButtonSimpleImageLoaderApplet)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JButtonSimpleImageLoader)))
+                        .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonBorderLayout)
-                            .addComponent(jButtonJTextField)
-                            .addComponent(jButtonJComboBox)
-                            .addComponent(jButtonJTree))
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonAnimation)
                             .addComponent(jButtonJTable)
                             .addComponent(JButtonJTabbedPane)
                             .addComponent(jButtonJCheckBox)
                             .addComponent(jButtonGridLayout))))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +246,14 @@ public class main extends javax.swing.JFrame {
                     .addComponent(jButtonJScrollPane)
                     .addComponent(jButtonJTree)
                     .addComponent(jButtonJTable))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonSimpleImageLoaderApplet)
+                    .addComponent(JButtonSimpleImageLoader)
+                    .addComponent(jButtonAnimation))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonAudio)
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();
@@ -279,7 +328,7 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonJRadioButtonActionPerformed
 
     private void jButtonJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJComboBoxActionPerformed
-       mainSwingJFrame main = new mainSwingJFrame();
+        mainSwingJFrame main = new mainSwingJFrame();
         main.setVisible(true);
         JComboBoxDemo demo = new JComboBoxDemo();
         main.add(demo);
@@ -288,9 +337,9 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonJComboBoxActionPerformed
 
     private void JButtonJTabbedPaneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonJTabbedPaneActionPerformed
-       mainSwingJFrame main = new mainSwingJFrame();
+        mainSwingJFrame main = new mainSwingJFrame();
         main.setVisible(true);
-        JTabbedPaneDemo demo=new JTabbedPaneDemo();
+        JTabbedPaneDemo demo = new JTabbedPaneDemo();
         main.add(demo);
         demo.setBounds(0, 0, 500, 500);
         demo.setVisible(true);
@@ -299,7 +348,7 @@ public class main extends javax.swing.JFrame {
     private void jButtonJScrollPaneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJScrollPaneActionPerformed
         mainSwingJFrame main = new mainSwingJFrame();
         main.setVisible(true);
-        JScrollPaneDemo demo=new JScrollPaneDemo();
+        JScrollPaneDemo demo = new JScrollPaneDemo();
         main.add(demo);
         demo.setBounds(0, 0, 1000, 1000);
         demo.setVisible(true);
@@ -308,7 +357,7 @@ public class main extends javax.swing.JFrame {
     private void jButtonJTreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJTreeActionPerformed
         mainSwingJFrame main = new mainSwingJFrame();
         main.setVisible(true);
-        JTreeDemo demo=new JTreeDemo();
+        JTreeDemo demo = new JTreeDemo();
         main.add(demo);
         demo.setBounds(0, 0, 1000, 1000);
         demo.setVisible(true);
@@ -317,11 +366,42 @@ public class main extends javax.swing.JFrame {
     private void jButtonJTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJTableActionPerformed
         mainSwingJFrame main = new mainSwingJFrame();
         main.setVisible(true);
-        JTableDemo demo=new JTableDemo();
+        JTableDemo demo = new JTableDemo();
         main.add(demo);
         demo.setBounds(0, 0, 1000, 1000);
         demo.setVisible(true);
     }//GEN-LAST:event_jButtonJTableActionPerformed
+
+    private void jButtonSimpleImageLoaderAppletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSimpleImageLoaderAppletActionPerformed
+        mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        SimpleImageLoaderApplet demo = new SimpleImageLoaderApplet();
+        main.add(demo);
+        demo.setBounds(0, 0, 1000, 1000);
+        demo.setVisible(true);
+    }//GEN-LAST:event_jButtonSimpleImageLoaderAppletActionPerformed
+
+    private void JButtonSimpleImageLoaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonSimpleImageLoaderActionPerformed
+        mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        SimpleImageLoader demo = new SimpleImageLoader();
+        main.add(demo);
+        demo.setBounds(0, 0, 1000, 1000);
+        demo.setVisible(true);
+    }//GEN-LAST:event_JButtonSimpleImageLoaderActionPerformed
+
+    private void jButtonAnimationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnimationActionPerformed
+        mainSwingJFrame main = new mainSwingJFrame();
+        main.setVisible(true);
+        Animation demo = new Animation();
+        main.add(demo);
+        demo.setBounds(0, 0, 1000, 1000);
+        demo.setVisible(true);
+    }//GEN-LAST:event_jButtonAnimationActionPerformed
+
+    private void jButtonAudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAudioActionPerformed
+
+    }//GEN-LAST:event_jButtonAudioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -361,7 +441,10 @@ public class main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JButtonJIconLabel;
     private javax.swing.JButton JButtonJTabbedPane;
+    private javax.swing.JButton JButtonSimpleImageLoader;
     private javax.swing.JButton jButtonAdapter;
+    private javax.swing.JButton jButtonAnimation;
+    private javax.swing.JButton jButtonAudio;
     private javax.swing.JButton jButtonBorderLayout;
     private javax.swing.JButton jButtonCardLayout;
     private javax.swing.JButton jButtonFlowLayout;
@@ -373,5 +456,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton jButtonJTable;
     private javax.swing.JButton jButtonJTextField;
     private javax.swing.JButton jButtonJTree;
+    private javax.swing.JButton jButtonSimpleImageLoaderApplet;
     // End of variables declaration//GEN-END:variables
 }
