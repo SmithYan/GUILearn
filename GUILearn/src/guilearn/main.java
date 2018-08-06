@@ -6,6 +6,7 @@
 package guilearn;
 
 /**
+ * GUI学习主界面，可以在这个界面中点击不同按钮学到不同知识
  *
  * @author wy521
  */
@@ -17,7 +18,7 @@ public class main extends javax.swing.JFrame {
     public main() {
         initComponents();
         //居中显示
-        this.setLocationRelativeTo(null);  
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,6 +32,8 @@ public class main extends javax.swing.JFrame {
 
         jButtonFlowLayout = new javax.swing.JButton();
         jButtonBorderLayout = new javax.swing.JButton();
+        jButtonGridLayout = new javax.swing.JButton();
+        jButtonCardLayout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GUILearn");
@@ -50,16 +53,35 @@ public class main extends javax.swing.JFrame {
             }
         });
 
+        jButtonGridLayout.setText("GridLayoutDemo");
+        jButtonGridLayout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGridLayoutActionPerformed(evt);
+            }
+        });
+
+        jButtonCardLayout.setLabel("CardLayoutDemo");
+        jButtonCardLayout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCardLayoutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
-                .addComponent(jButtonFlowLayout)
-                .addGap(57, 57, 57)
-                .addComponent(jButtonBorderLayout)
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonCardLayout)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButtonFlowLayout)
+                        .addGap(57, 57, 57)
+                        .addComponent(jButtonBorderLayout)
+                        .addGap(50, 50, 50)
+                        .addComponent(jButtonGridLayout)))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,24 +89,42 @@ public class main extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonFlowLayout)
-                    .addComponent(jButtonBorderLayout))
-                .addContainerGap(392, Short.MAX_VALUE))
+                    .addComponent(jButtonBorderLayout)
+                    .addComponent(jButtonGridLayout))
+                .addGap(30, 30, 30)
+                .addComponent(jButtonCardLayout)
+                .addContainerGap(335, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonFlowLayoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFlowLayoutActionPerformed
-       FlowLayoutDemo demo=new FlowLayoutDemo();
-       demo.setVisible(true);
+        FlowLayoutDemo demo = new FlowLayoutDemo();
+        demo.setVisible(true);
+        demo.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonFlowLayoutActionPerformed
 
     private void jButtonBorderLayoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorderLayoutActionPerformed
-        BorderLayoutDemo demo=new BorderLayoutDemo();
-        demo.setSize(400,200);
-        demo.pack();
+        BorderLayoutDemo demo = new BorderLayoutDemo();
+        demo.setSize(400, 200);
         demo.setVisible(true);
+        demo.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonBorderLayoutActionPerformed
+
+    private void jButtonGridLayoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGridLayoutActionPerformed
+        // DemoLaucher demo=  new DemoLaucher("guilearn.GridLayoutDemo");
+        GridLayoutDemo gld = new GridLayoutDemo();
+        gld.setLocationRelativeTo(null);
+        gld.setVisible(true);
+    }//GEN-LAST:event_jButtonGridLayoutActionPerformed
+
+    private void jButtonCardLayoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCardLayoutActionPerformed
+        CardLayoutDemo demo = new CardLayoutDemo();
+        demo.setVisible(true);
+        demo.setSize(400, 200);
+        demo.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButtonCardLayoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,6 +163,8 @@ public class main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBorderLayout;
+    private javax.swing.JButton jButtonCardLayout;
     private javax.swing.JButton jButtonFlowLayout;
+    private javax.swing.JButton jButtonGridLayout;
     // End of variables declaration//GEN-END:variables
 }

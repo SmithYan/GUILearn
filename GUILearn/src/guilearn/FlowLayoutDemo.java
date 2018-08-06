@@ -12,17 +12,17 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- *
+ * ÉèÖÃ¶ÔÆä·½·¨µÄÒ»¸öÊ¾Àı
  * @author wy521
  */
 public class FlowLayoutDemo  extends Frame{
      Label one, two, three, four;
 
     /**
-     * æ·»åŠ å¹¶æ˜¾ç¤ºlabel
+     * Ìí¼Ó²¢ÏÔÊ¾label
      */
     public void init() {
-        //è®¾ç½®å·¦å¯¹é½
+        //ÉèÖÃ×ó¶ÔÆë
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
 
         
@@ -39,9 +39,9 @@ public class FlowLayoutDemo  extends Frame{
     }
 
     public FlowLayoutDemo() {
-        super("FloeLayoutç¤ºä¾‹");
+        super("FloeLayoutÊ¾Àı");
         init();
-        //æ·»åŠ çª—å£å…³é—­ä½†ä¸æ€æ­»ä¸»çº¿ç¨‹çš„ç›‘å¬
+        //Ìí¼Ó´°¿Ú¹Ø±Õµ«²»É±ËÀÖ÷Ïß³ÌµÄ¼àÌı
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent we) {
                 dispose();

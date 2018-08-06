@@ -14,25 +14,25 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- *
+ * ÈİÆ÷µÄ¶«ÄÏÎ÷±±ÖĞÎå¸öÇøÓò
  * @author wy521
  */
 public class BorderLayoutDemo extends Frame{
     public void init(){
         this.setLayout(new BorderLayout());
         
-        this.add(new Button("ä¸Š."),BorderLayout.NORTH);
-        this.add(new Label("ä¸‹é¢è¿™ä¸ªéƒ¨åˆ†é€šå¸¸ç”¨æ¥æ˜¾ç¤ºçŠ¶æ€ä¿¡æ¯"),BorderLayout.SOUTH);
-        this.add(new Button("å³"),BorderLayout.EAST);
-        this.add(new Button("å·¦"),BorderLayout.WEST);
+        this.add(new Button("ÉÏ."),BorderLayout.NORTH);
+        this.add(new Label("ÏÂÃæÕâ¸ö²¿·ÖÍ¨³£ÓÃÀ´ÏÔÊ¾×´Ì¬ĞÅÏ¢"),BorderLayout.SOUTH);
+        this.add(new Button("ÓÒ"),BorderLayout.EAST);
+        this.add(new Button("×ó"),BorderLayout.WEST);
         String msg="Every thing that has a beginning has an end!";
         this.add(new TextArea(msg),BorderLayout.CENTER);
     }
     
     public BorderLayoutDemo(){
-        super("BorderLayoutç¤ºä¾‹");
+        super("BorderLayoutÊ¾Àı");
         init();
-        //æ·»åŠ çª—å£å…³é—­ä½†ä¸æ€æ­»ä¸»çº¿ç¨‹çš„ç›‘å¬
+        //Ìí¼Ó´°¿Ú¹Ø±Õµ«²»É±ËÀÖ÷Ïß³ÌµÄ¼àÌı
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent we) {
                 dispose();
